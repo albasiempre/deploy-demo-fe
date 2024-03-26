@@ -12,5 +12,6 @@ export const loginCall = async (user, dispatch) => {
     return response;
   } catch (err) {
     dispatch({ type: "LOGIN_ERROR", payload: err });
+    return err.response;
   }
 };
