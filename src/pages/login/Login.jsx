@@ -26,9 +26,11 @@ export default function Login() {
 
     ).then(response => {
 
-      // console.log("login 1");
+      console.log(response);
       const username = response.data.username;
       navigate(`/profile/${username}`); // ログイン成功後にホーム画面へ遷移
+    }).catch(err => {
+      console.log(err);
     });
   };
 
